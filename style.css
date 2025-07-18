@@ -1,0 +1,13 @@
+body {
+  background-image: url('pics/weather-bg.jpg');
+  background-size: cover;            /* fills the screen without distortion */
+  background-position: center;       /* keeps the image centered */
+  background-repeat: no-repeat;      /* prevents tiling */
+  background-attachment: fixed;      /* makes it stay on scroll (optional) */
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+}
