@@ -1,13 +1,106 @@
+/*
 body {
   background-image: url('pics/weather-bg.jpg');
-  background-size: cover;            /* fills the screen without distortion */
-  background-position: center;       /* keeps the image centered */
-  background-repeat: no-repeat;      /* prevents tiling */
-  background-attachment: fixed;      /* makes it stay on scroll (optional) */
+  background-size: cover;            /* fills the screen without distortion 
+  background-position: center;       /* keeps the image centered 
+  background-repeat: no-repeat;      /* prevents tiling 
+  background-attachment: fixed;      /* makes it stay on scroll (optional) 
   margin: 0;
-  height: 100vh;
+  height: 120vh;
   width: 100vw;
   font-family: sans-serif;
   color: white;
   text-align: center;
 }
+*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.box1
+{
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  border: 1px solid black;
+}
+
+.box1half1
+{
+  display: flex;
+  flex: 1;
+  border: 1px solid black;  
+}
+
+.box1half2 {
+  display: flex;
+  flex: 1.75;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+  border: 1px solid black;
+}
+
+.searchbar {
+  position: relative;
+  width: 250px;
+}
+
+.searchbar input {
+  width: 200%;
+  padding: 10px 45px 10px 15px; /* space for icon */
+  border-radius: 20px;
+  border: 1px solid #0a0606;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.searchbar .searchbutton {
+  position: absolute;
+  top: 50%;
+  margin-left: 425px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.searchbar .searchbutton img {
+  width: 50px;
+  height: 40px;
+}
+
+.box2
+{
+  display: flex;
+  flex: 5.5;
+  flex-direction: row;
+  border: 1px solid black;
+
+}
+
+.box2half1
+{
+  display: flex;
+  flex: 1;
+  border: 1px solid black;
+}
+
+.box2half2
+{
+  display: flex;
+  flex: 1;
+  border: 1px solid black; 
+}
+
+.box3
+{
+  display: flex;
+  flex: 3.5;
+  border: 1px solid black;
+}
+
