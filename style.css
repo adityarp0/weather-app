@@ -1,23 +1,23 @@
-/*
 body {
   background-image: url('pics/weather-bg.jpg');
-  background-size: cover;            /* fills the screen without distortion 
-  background-position: center;       /* keeps the image centered 
-  background-repeat: no-repeat;      /* prevents tiling 
-  background-attachment: fixed;      /* makes it stay on scroll (optional) 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   margin: 0;
-  height: 120vh;
+  padding: 0;
+  height: 100vh;
   width: 100vw;
   font-family: sans-serif;
   color: white;
-  text-align: center;
+  text-align: left;  /* 🔧 important to prevent center alignment */
 }
-*/
+
 
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 120vh;
 }
 
 .box1
@@ -74,33 +74,85 @@ body {
   height: 40px;
 }
 
-.box2
-{
+.box2 {
   display: flex;
   flex: 5.5;
   flex-direction: row;
-  border: 1px solid black;
-
+  gap: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  overflow: hidden; /* Prevent content from spilling out */
 }
 
-.box2half1
-{
-  display: flex;
+.box2half1 {
   flex: 1;
-  border: 1px solid black;
-}
-
-.box2half2
-{
+  padding: 20px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: white;
+  font-size: 18px;
   display: flex;
-  flex: 1;
-  border: 1px solid black; 
+  flex-direction: column;
+  gap: 10px;
+  
+  max-height: 100%;              /* Ensures it doesn't exceed .box2 */
+  box-sizing: border-box;
 }
 
+
+.box2half1,
+.box2half2 {
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: rgb(196, 193, 193);
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+ 
+}
+
+/* Optional box shadow for pop */
+.box1, .box2 {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
 .box3
 {
   display: flex;
   flex: 3.5;
   border: 1px solid black;
+}
+
+.box3 {
+  padding: 20px;
+  color: white;
+
+}
+
+.forecast-table {
+  width: 100%;
+  border-collapse: collapse;
+  
+ color: rgb(196, 193, 193);
+}
+
+.forecast-table th, .forecast-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.forecast-table thead {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.forecast-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
